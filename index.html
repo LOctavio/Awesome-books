@@ -8,15 +8,17 @@
   <link rel="stylesheet" href=style.css>
 </head>
 <body>
+  <p id="example"></p>
   <div id="books">
     <p id="name"></p>
-    <p id="author"></p>
+    <p id="writer"></p>
   </div>
-  <input type="text" name="title" placeholder="title">
+  <input type="text" id="title" name="title" placeholder="title">
   <br/>
-  <input type="text" name="author" placeholder="author">
+  <input type="text" id="author" name="author" placeholder="author">
   <br>
-  <input type="submit" value="Add">
+  <input type="submit"  onclick="AddNewBook()" value="Add">
+  
   <script src="script.js"></script>
 </body>
 </html>

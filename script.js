@@ -1,19 +1,15 @@
- const BookApp = () => {
+var bookLists = [];
+localStorage.setItem('bookslist', JSON.stringify(bookLists));
+document.getElementById("name").innerHTML = JSON.stringify(bookLists);
 
-let bookLists = {
-  name: "Octavia"
+function AddNewBook() {
+  const newbook = {
+    title: document.getElementById("title").value,
+    author: document.getElementById("author").value
+  }
+  bookLists.push(newbook);
+  localStorage.setItem('bookslist', JSON.stringify(bookLists));
+  document.getElementById("name").innerHTML = JSON.stringify(bookLists);
 }
 
-let bookName = document.getElementById("name");
-let author = document.getElementById("author");
 
-bookName.innerHTML = bookLists.name;
-
-const AddNewBook = () => {
-
-}
-
-AddNewBook();
-}
-
-BookApp()
