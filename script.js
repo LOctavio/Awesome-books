@@ -18,7 +18,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
   div.innerHTML = `
   <p>${title}</p>
   <p>${author}</p>
-  <a onclick = "remove('${title, author}')" id="delete">Remove Book</a>`
+  <a onclick = "remove('${title}', '${author}')" id="delete">Remove Book</a>`
  let list = document.getElementById("list")
   const book = new Book(title, author)
   bookList.push(book)
@@ -28,11 +28,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
 })
 
 function filterByTitle(item){
-  if( item.title===this.title && item.author===this.author) {
-    return true
-  }else {
-    return false
-  }
+  return item.title!=this.title &&item.author!=this.author
 }
 function remove(title, author){
   this.title=title
