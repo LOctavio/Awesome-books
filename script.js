@@ -18,8 +18,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
   div.innerHTML = `
   <p>${title}</p>
   <p>${author}</p>
-  <a onclick = "remove('${title}', '${author}')" id="delete">Remove Book</a>`
- let list = document.getElementById("list")
+  <a onclick = "remove('${title}', '${author}', this)" class="delete">Remove Book</a>`
   const book = new Book(title, author)
   bookList.push(book)
   list.appendChild(div)
@@ -28,11 +27,12 @@ document.getElementById("form").addEventListener("submit", (e) => {
 })
 
 function filterByTitle(item){
-  return item.title!=this.title &&item.author!=this.author
+  return item.title!=this.title && item.author!=this.author
 }
-function remove(title, author){
+function remove(title, author, e){
   this.title=title
   this.author=author
+  e.parentNode.parentNode.removeChild(e.parentNode);
   bookList = bookList.filter(filterByTitle)
   console.log(bookList)
 }
