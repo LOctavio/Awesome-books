@@ -6,14 +6,19 @@ let author;
 for (var i = 0; i<localStorage.length; i++) {
   title = localStorage.key(i);
   author = localStorage.getItem(localStorage.key(i));
+  displayBook(title, author);
   book = new Book(title, author);
   bookList.push(book);
+  
+}
+
+function displayBook(title, author) {
   let div = document.createElement('div');
-    div.innerHTML = `
-    <p>${title}</p>
-    <p>${author}</p>
-    <a onclick = "remove('${title}', '${author}', this)" class="delete">Remove Book</a>`
-    list.appendChild(div)
+  div.innerHTML = `
+  <p>${title}</p>
+  <p>${author}</p>
+  <button onclick = "remove('${title}', '${author}', this)" class="delete">Remove Book</button>`
+  list.appendChild(div)
 }
 
 function Book(title, author) {
@@ -30,12 +35,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
   book = new Book(title, author)
   bookList.push(book)
   saveLocalStorage(title, author)
-  let div = document.createElement('div');
-  div.innerHTML = `
-  <p>${title}</p>
-  <p>${author}</p>
-  <a onclick = "remove('${title}', '${author}', this)" class="delete">Remove Book</a>`
-  list.appendChild(div)
+  displayBook(title, author)
 })
 
 function filterByTitle(item){
