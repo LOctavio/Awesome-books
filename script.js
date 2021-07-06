@@ -1,7 +1,21 @@
 
 let bookList = []
+let book;
 let title;
 let author;
+for (var i = 0; i<localStorage.length; i++) {
+  title = localStorage.key(i);
+  author = localStorage.getItem(localStorage.key(i));
+  book = new Book(title, author);
+  bookList.push(book);
+  let div = document.createElement('div');
+    div.innerHTML = `
+    <p>${title}</p>
+    <p>${author}</p>
+    <a onclick = "remove('${title}', '${author}', this)" class="delete">Remove Book</a>`
+    list.appendChild(div)
+}
+
 function Book(title, author) {
   this.title = title
   this.author = author
@@ -11,19 +25,17 @@ function Book(title, author) {
 
 document.getElementById("form").addEventListener("submit", (e) => {
   e.preventDefault()
-  const title = document.getElementById("title").value
-  const author = document.getElementById("book-author").value
-
+  title = document.getElementById("title").value
+  author = document.getElementById("book-author").value
+  book = new Book(title, author)
+  bookList.push(book)
+  saveLocalStorage(title, author)
   let div = document.createElement('div');
   div.innerHTML = `
   <p>${title}</p>
   <p>${author}</p>
   <a onclick = "remove('${title}', '${author}', this)" class="delete">Remove Book</a>`
-  const book = new Book(title, author)
-  bookList.push(book)
   list.appendChild(div)
-  saveLocalStorage()
-  console.log(book)
 })
 
 function filterByTitle(item){
@@ -34,12 +46,12 @@ function remove(title, author, e){
   this.author=author
   e.parentNode.parentNode.removeChild(e.parentNode);
   bookList = bookList.filter(filterByTitle)
-  console.log(bookList)
+  localStorage.removeItem(title)
 }
 
 
-const saveLocalStorage = () => {
-  window.localStorage.setItem('books', JSON.stringify(bookList));
+const saveLocalStorage = (title, author) => {
+  window.localStorage.setItem(title, author);
 }
 
 
