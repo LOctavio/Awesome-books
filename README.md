@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-https://book-review-time.herokuapp.com/
+https://loctavio.github.io/Awesome-books/
 
 ## Getting Started
 
