@@ -49,7 +49,6 @@ class UI {
     this.bookDisplay(book.title, book.author);
     //document.getElementById("form").reset()
    
-    bookList.appendChild(row);
     Store.saveLocalStorage(book.title, book.author)
     console.log(books);
   }
