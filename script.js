@@ -4,9 +4,13 @@ class Book {
     this.author = author;
   }
 }
+let books = [];
+const saveLocalStorage = (title, author) => {
+  window.localStorage.setItem(title, author);
+};
 class UI {
   static bookDisplay() {
-
+    
     books.forEach((book) => UI.addBook(book));
   }
 
@@ -20,26 +24,26 @@ class UI {
       <td>${book.author}</td>
       <td><button class="delete">Remove Book</button></td>
     `;
-
+    //document.getElementById("form").reset()
     bookList.appendChild(row);
+    saveLocalStorage(book.title, book.author)
   }
   static remove(el) {
     if(el.classList.contains('delete')) {
       el.parentElement.parentElement.remove();
     }
   }
+  
 }
 
-// for (let i = 0; i < localStorage.length; i += 1) {
-//   title = localStorage.key(i);
-//   author = localStorage.getItem(localStorage.key(i));
-//   displayBook(title, author);
-//   book = new Book(title, author);
-//   bookList.push(book);
-// }
-// const saveLocalStorage = (title, author) => {
-//   window.localStorage.setItem(title, author);
-// };
+for (let i = 0; i < localStorage.length; i += 1) {
+   title = localStorage.key(i);
+   author = localStorage.getItem(localStorage.key(i));
+   UI.bookDisplay(title, author);
+   book = new Book(title, author);
+   books.push(book);
+}
+
 document.addEventListener('DOMContentLoaded', UI.bookDisplay);
 document.querySelector('#book-form').addEventListener('submit', (e) => {
   e.preventDefault();
