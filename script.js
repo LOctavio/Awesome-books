@@ -44,8 +44,8 @@ function filterByTitle(item){
   return item.title!=this.title && item.author!=this.author
 }
 function remove(title, author, e){
-  this.title=title
-  this.author=author
+  this.title = title;
+  this.author = author;
   e.parentNode.parentNode.removeChild(e.parentNode);
   bookList = bookList.filter(filterByTitle);
   localStorage.removeItem(title);
@@ -55,5 +55,3 @@ function remove(title, author, e){
 const saveLocalStorage = (title, author) => {
   window.localStorage.setItem(title, author);
 }
-
-
