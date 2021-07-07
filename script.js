@@ -34,7 +34,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
   author = document.getElementById('book-author').value;
   book = new Book(title, author);
   bookList.push(book);
-  document.getElementById("form").reset()
+  document.getElementById('form').reset();
 
   saveLocalStorage(title, author);
   displayBook(title, author);
