@@ -1,0 +1,30 @@
+{
+  "name": "awesome-books",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "-": "^0.0.1",
+    "eslint-config-airbnb": "^18.2.1",
+    "g": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LOctavio/Awesome-books.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LOctavio/Awesome-books/issues"
+  },
+  "homepage": "https://github.com/LOctavio/Awesome-books#readme"
+}
