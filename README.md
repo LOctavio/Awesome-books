@@ -47,11 +47,13 @@ Start the live server from the html file
 - Twitter: [@DevGrachy](https://twitter.com/devgrachy)
 - LinkedIn: [Ajanaku Temitope](https://www.linkedin.com/in/ajanaku-temitope/)
 
-# Author 1
+# Author 2
 
-👤 **Luis Octavia**
+👤 **Luis Octavio Ramirez Cruz**
 
 - GitHub: [LOctavio](https://github.com/LOctavio)
+- Twitter: [@Octavio_ram431](https://twitter.com/Octavio_ram431)
+- LinkedIn: [Luis Octavio Ramirez Cruz](https://www.linkedin.com/in/luis-octavio-ramirez-cruz/)
 
 ## 🤝 Contributing
 
