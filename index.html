@@ -17,12 +17,12 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-md-0 ">
         <li class="nav-item">
-          <a class="nav-link" href="">List <span class="ml-3 text-primary">|</span> </a>
+          <a class="nav-link"  onclick="document.getElementById('list-page').style.display = 'block'; document.getElementById('book-form').style.display = 'none'; document.getElementById('contact-page').style.display = 'none';">List <span class="ml-3 text-primary">|</span> </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#book-form">Add new <span class="ml-3 text-primary">|</span></a>
+          <a class="nav-link" onclick="document.getElementById('list-page').style.display = 'none'; document.getElementById('book-form').style.display = 'block'; document.getElementById('contact-page').style.display = 'none';">Add new <span class="ml-3 text-primary">|</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" onclick="document.getElementById('list-page').style.display = 'none'; document.getElementById('book-form').style.display = 'none'; document.getElementById('contact-page').style.display = 'block';">
           <a class="nav-link" href="#!">Contact</a>
         </li>
       </ul>
@@ -30,18 +30,20 @@
   </nav>
   <div id="page-time"></div>
   <div class="container w-75">
-
-    <h3 class="text-center mt-3">All awesome Books</h3>
-    <table class="book-table table mt-3 table-striped">
-      <thead>
-        <tr>
-          <th>Book Title</th>
-        <th>Book Author</th>
-        <th></th>
-        </tr>
-      </thead>
-      <tbody id="book-list" class="mb-3"></tbody>
-    </table>
+    <div id="list-page">
+      <h3 class="text-center mt-3">All awesome Books</h3>
+        <table class="book-table table mt-3 table-striped">
+          <thead>
+            <tr>
+              <th>Book Title</th>
+            <th>Book Author</th>
+            <th></th>
+            </tr>
+          </thead>
+          <tbody id="book-list" class="mb-3"></tbody>
+        </table>
+    </div>
+    
     <form id="book-form">
       <h4 class="text-center mt-3">Add a new Book!</h4>
 
@@ -57,7 +59,7 @@
     <input type="submit" value="Add Book" id="submit" class="form control mb-3 btn-lg">
     </form>
   </div>
-  <div>
+  <div id="contact-page">
     <h4 class="text-center mt-3">Contact US</h4>
     <div id="contact-container" class="container mb-3  d-flex justify-content-around">
       <div>
