@@ -13,7 +13,7 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand"  onclick="document.getElementById('list-page').style.display = 'block'; document.getElementById('book-form').style.display = 'block'; document.getElementById('contact-page').style.display = 'block';">Awesome <span class="ml-3 text-primary">|</span> </a>
+    <a class="navbar-brand"  onclick="document.getElementById('list-page').style.display = 'block'; document.getElementById('book-form').style.display = 'block'; document.getElementById('contact-page').style.display = 'block';">Awesome books<span class="ml-3 text-primary">|</span> </a>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-md-0 ">
@@ -23,8 +23,8 @@
         <li class="nav-item">
           <a class="nav-link" onclick="document.getElementById('list-page').style.display = 'none'; document.getElementById('book-form').style.display = 'block'; document.getElementById('contact-page').style.display = 'none';">Add new <span class="ml-3 text-primary">|</span></a>
         </li>
-        <li class="nav-item" onclick="document.getElementById('list-page').style.display = 'none'; document.getElementById('book-form').style.display = 'none'; document.getElementById('contact-page').style.display = 'block';">
-          <a class="nav-link" href="#!">Contact</a>
+        <li class="nav-item" >
+          <a class="nav-link" onclick="document.getElementById('list-page').style.display = 'none'; document.getElementById('book-form').style.display = 'none'; document.getElementById('contact-page').style.display = 'block';">Contact</a>
         </li>
       </ul>
     </div>
@@ -60,7 +60,7 @@
     <input type="submit" value="Add Book" id="submit" class="form control mb-3 btn-lg">
     </form>
   </div>
-  <div id="contact-page mb-3">
+  <div id="contact-page" class="">
     <h4 class="text-center mt-3">Contact US</h4>
     <div id="contact-container" class="container mb-3  d-flex justify-content-around">
       <div>
