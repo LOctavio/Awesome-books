@@ -1,14 +1,22 @@
 /* styles */
 footer {
-    background-color: black;
-    height: 50px;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0px;
+  background-color: black;
+  height: 50px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
 footer a {
   text-decoration: none;
   color: white;
+}
+
+#awesome-nav {
+  background-color: black;
+}
+
+#awesome-nav a:hover {
+  color: blue;
 }
