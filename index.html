@@ -4,23 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <title>Book App</title>
 </head>
 <body>
-  <div>
-    <h1>Book App</h1>
-    <form id="book-form">
-      <div>
-      <label for="Book Title">Book Title</label>
-      <input type="text" name="" id="title">
-    </div>
-    <div>
-      <label for="Book Author">Book Author</label>
-      <input type="text" name="" id="author">
-    </div>
-    <input type="submit" value="Add Book" id="submit">
-    </form>
-    <table class="book-table">
+  <div class="container w-75">
+
+    <h1 class="text-center">All awesome Books</h1>
+    <table class="book-table table mt-3">
       <thead>
         <tr>
           <th>Book Title</th>
@@ -30,7 +21,21 @@
       </thead>
       <tbody id="book-list"></tbody>
     </table>
+    <div class="w-50 align-items-center">
+    <form id="book-form">
+      <div class="form-group">
+      <label for="Book Title">Book Title</label>
+      <input type="text" name="" id="title" class="form-control" placeholder="Title">
+    </div>
+    <div class="form-group">
+      <label for="Book Author">Book Author</label>
+      <input type="text" name="" id="author" class="form-control" placeholder="Author">
+    </div class="form-group">
+    <input type="submit" value="Add Book" id="submit" class="form control mb-3">
+    </form>
   </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 </html>
