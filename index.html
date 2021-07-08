@@ -7,13 +7,30 @@
   <title>Book App</title>
 </head>
 <body>
-  <section id="list">
-  </section>
-  <form id="form">
-    <input type="text" value="" placeholder="Book Title" id="title"> <br>
-    <input type="text" value="" placeholder="Book Name" id="book-author"> <br>
-    <input type="submit" value="Add New Book"  id="submit">
-  </form>
+  <div>
+    <h1>Book App</h1>
+    <form id="book-form">
+      <div>
+      <label for="Book Title">Book Title</label>
+      <input type="text" name="" id="title">
+    </div>
+    <div>
+      <label for="Book Author">Book Author</label>
+      <input type="text" name="" id="author">
+    </div>
+    <input type="submit" value="Add Book" id="submit">
+    </form>
+    <table class="book-table">
+      <thead>
+        <tr>
+          <th>Book Title</th>
+        <th>Book Author</th>
+        <th></th>
+        </tr>
+      </thead>
+      <tbody id="book-list"></tbody>
+    </table>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
