@@ -5,9 +5,18 @@ class Book {
   }
 }
 let books = [];
-const saveLocalStorage = (title, author) => {
-  window.localStorage.setItem(title, author);
-};
+class Store {
+  static saveLocalStorage (title, author) {
+    window.localStorage.setItem(title, author);
+    for (let i = 0; i < localStorage.length; i += 1) {
+      title = localStorage.key(i);
+      author = localStorage.getItem(localStorage.key(i));
+      UI.bookDisplay(title, author);
+      books.push(book);
+   }
+  };
+  
+}
 class UI {
   static bookDisplay() {
     
@@ -25,24 +34,18 @@ class UI {
       <td><button class="delete">Remove Book</button></td>
     `;
     //document.getElementById("form").reset()
+   
     bookList.appendChild(row);
-    saveLocalStorage(book.title, book.author)
+    Store.saveLocalStorage(book.title, book.author)
   }
   static remove(el) {
     if(el.classList.contains('delete')) {
       el.parentElement.parentElement.remove();
     }
   }
-  
+
 }
 
-for (let i = 0; i < localStorage.length; i += 1) {
-   title = localStorage.key(i);
-   author = localStorage.getItem(localStorage.key(i));
-   UI.bookDisplay(title, author);
-   book = new Book(title, author);
-   books.push(book);
-}
 
 document.addEventListener('DOMContentLoaded', UI.bookDisplay);
 document.querySelector('#book-form').addEventListener('submit', (e) => {
