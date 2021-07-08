@@ -17,7 +17,7 @@ class UI {
     row.innerHTML = `
         <td>${title}</td>
         <td>${author}</td>
-        <td><button class="delete">Remove Book</button></td>
+        <td><button class="delete btn btn-danger">Remove Book</button></td>
       `;
     bookList.appendChild(row);
     document.getElementById('book-form').reset();
