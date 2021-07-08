@@ -1,1 +1,6 @@
 /* styles */
+footer {
+    background-color: black;
+    height: 100px;
+    color: white;
+}
