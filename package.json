@@ -6,7 +6,9 @@
   "dependencies": {
     "-": "^0.0.1",
     "eslint-config-airbnb": "^18.2.1",
-    "g": "^2.0.1"
+    "g": "^2.0.1",
+    "luxon": "^1.27.0",
+    "type": "module"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
