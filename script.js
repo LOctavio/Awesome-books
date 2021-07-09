@@ -1,4 +1,3 @@
-// import { DateTime } from "luxon";
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -59,15 +58,14 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 });
 
 const Date = () => {
-  
-  var DateTime = luxon.DateTime
+  const { DateTime } = luxon;
   const now = DateTime.now();
-  let dateContainer = document.getElementById("page-time")
-  let p = document.createElement("p")
-  p.innerHTML =  `<p class="text-grey mt-3 ml-3 font-weight-bold">Date: ${now.month}/${now.day}/${now.year}</p>
-  <p class="text-grey mt-3 ml-3 font-weight-bold">Time: ${now.hour}:${now.minute}</p>`
-  dateContainer.appendChild(p)
-  console.log(now)
-  console.log("date")
-}
-Date()
+  const dateContainer = document.getElementById('page-time');
+  const p = document.createElement('p');
+  p.innerHTML = `<p class="text-grey mt-3 ml-3 font-weight-bold">Date: ${now.month}/${now.day}/${now.year}</p>
+  <p class="text-grey mt-3 ml-3 font-weight-bold">Time: ${now.hour}:${now.minute}</p>`;
+  dateContainer.appendChild(p);
+  console.log(now);
+  console.log('date');
+};
+Date();

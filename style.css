@@ -23,3 +23,7 @@ footer a {
 .contact-image {
   height: inherit;
 }
+
+#contact-container {
+  border: 2px solid black;
+}
