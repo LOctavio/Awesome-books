@@ -30,10 +30,15 @@ footer a {
 }
 
 #contact-page {
-  display: none;
+  /* display: none; */
   margin-bottom: 70px;
 }
 
-#book-form {
+
+.block {
+  display: block;
+}
+
+.none {
   display: none;
 }

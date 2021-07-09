@@ -1,3 +1,6 @@
+let listPage = document.getElementById("list-page");
+let contactPage = document.getElementById("contact-page")
+let addBook = document.getElementById("book-form")
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -70,3 +73,31 @@ const Date = () => {
   console.log('date');
 };
 Date();
+
+const hideSection = () => {
+  document.getElementById("list-btn").addEventListener("click", (e) => {
+   addBook.classList.add("none")
+    contactPage.classList.add("none"); 
+    listPage.classList.remove("none"); 
+
+
+  })
+  document.getElementById("add-book-btn").addEventListener("click", (e) => {
+    listPage.classList.add("none")
+   contactPage.classList.add("none"); 
+    addBook.classList.remove("none"); 
+
+  })
+  document.getElementById("contact-btn").addEventListener("click", (e) => {
+   listPage.classList.add("none")
+    contactPage.classList.remove("none"); 
+    addBook.classList.add("none"); 
+  })
+  document.getElementById("logo").addEventListener("click", (e) => {
+    listPage.classList.remove("none")
+    addBook.classList.remove("none"); 
+   contactPage.classList.remove("none"); 
+
+  })
+}
+hideSection()
