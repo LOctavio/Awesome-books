@@ -8,7 +8,7 @@
 - JavaScript
 
 ## Screenshot of App
-<img width="794" alt="new ui" src="https://user-images.githubusercontent.com/58818795/124880510-39e5bf80-df83-11eb-9753-4cb59fb8bffd.png">
+<img width="941" alt="awesome" src="https://user-images.githubusercontent.com/58818795/124990270-fc217f00-dff4-11eb-8b3e-af0a4297b6af.png">
 
 
 ## Live Demo
