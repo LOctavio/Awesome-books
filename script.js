@@ -58,8 +58,9 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 });
 
 const Date = () => {
-  const { DateTime } = luxon;
-  const now = DateTime.now();
+  /* eslint-disable */
+  const now = luxon.DateTime.now();
+  /* eslint-enable */
   const dateContainer = document.getElementById('page-time');
   const p = document.createElement('p');
   p.innerHTML = `<p class="text-grey mt-3 ml-3 font-weight-bold">Date: ${now.month}/${now.day}/${now.year}</p>
