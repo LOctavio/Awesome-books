@@ -1,4 +1,3 @@
-/* styles */
 footer {
   background-color: black;
   height: 50px;
@@ -30,13 +29,7 @@ footer a {
 }
 
 #contact-page {
-  /* display: none; */
   margin-bottom: 70px;
-}
-
-
-.block {
-  display: block;
 }
 
 .none {
