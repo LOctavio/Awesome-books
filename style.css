@@ -1,1 +1,37 @@
-/* styles */
+footer {
+  background-color: black;
+  height: 50px;
+  color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+#awesome-nav {
+  background-color: black;
+}
+
+#awesome-nav a:hover {
+  color: blue;
+}
+
+.contact-image {
+  height: inherit;
+}
+
+#contact-container {
+  border: 2px solid black;
+}
+
+#contact-page {
+  margin-bottom: 70px;
+}
+
+.none {
+  display: none;
+}
